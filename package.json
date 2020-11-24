@@ -1,0 +1,23 @@
+{
+  "name": "now-playing",
+  "version": "0.0.1",
+  "description": "This is a now playing widget for [Übersicht](http://tracesof.net/uebersicht/) that displays the current track in Spotify.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/believer/uebersicht-now-playing.git"
+  },
+  "keywords": [],
+  "author": "Rickard Natt och Dag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/believer/uebersicht-now-playing/issues"
+  },
+  "homepage": "https://github.com/believer/uebersicht-now-playing#readme"
+}
