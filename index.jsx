@@ -34,8 +34,10 @@ const NowPlaying = styled.div`
   width: calc(100vw - 600px);
 `;
 
-const CoverLink = styled.a`
+const Link = styled.a`
+  color: rgb(79, 234, 253);
   cursor: pointer;
+  margin-left: 8px;
 `;
 
 const Cover = styled.div`
@@ -171,17 +173,18 @@ export const render = ({ output, error }) => {
       )}
       <NowPlaying cover={!!cover}>
         {cover && (
-          <CoverLink href={link}>
-            <Cover>
-              <CoverImage src={cover} />
-              <CoverShadow src={cover} />
-            </Cover>
-          </CoverLink>
+          <Cover>
+            <CoverImage src={cover} />
+            <CoverShadow src={cover} />
+          </Cover>
         )}
         <Metadata>
           <Track>{track}</Track>
           <Artist>{artist}</Artist>
-          <Album>{album}</Album>
+          <Album>
+            {album}
+            {link && <Link href={link}>Spotify</Link>}
+          </Album>
           <ProgressDisplay duration={duration} position={position} />
         </Metadata>
       </NowPlaying>
