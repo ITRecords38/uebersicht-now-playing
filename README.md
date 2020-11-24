@@ -7,12 +7,10 @@ that displays the current track in Spotify.
 
 ## Installation
 
-```
-$ git clone https://github.com/believer/uebersicht-now-playing.git
-$ mv uebersicht-now-playing ~/Library/Application Support/Übersicht/widgets
-```
+Download the `now-playing.widget.zip` and unzip it in your widgets folder
+(default: `~/Library/Application Support/Übersicht/widgets`)
 
 ## Upcoming features
 
-- [ ] Support both Spotify and Music (iTunes)
+- [x] Support both Spotify and Music (iTunes)
 - [x] Automatic releases with zip bundling for easier installation

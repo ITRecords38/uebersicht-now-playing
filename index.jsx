@@ -25,7 +25,7 @@ const NowPlaying = styled.div`
   color: #f9fafb;
   display: grid;
   font-family: "Inter";
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: ${({ cover }) => (cover ? "320px 1fr" : "1fr")};
   grid-column-gap: 32px;
   left: 300px;
   position: absolute;
@@ -117,8 +117,9 @@ const TrackDuration = styled.button`
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v);
 
 const parseTime = (seconds) => {
-  const m = Math.floor(seconds / 60);
-  const s = Math.floor(((seconds / 60) % 1) * 60);
+  const parsedSeconds = parseFloat(seconds.toString().replace(",", "."));
+  const m = Math.floor(parsedSeconds / 60);
+  const s = Math.floor(((parsedSeconds / 60) % 1) * 60);
 
   return `${m}:${addLeadingZero(s)}`;
 };
@@ -152,7 +153,6 @@ export const render = ({ output, error }) => {
     position,
     duration,
   ] = output.split("::");
-  const durationInSeconds = duration / 1000;
 
   if (state !== "playing" || error) {
     return null;
@@ -160,21 +160,25 @@ export const render = ({ output, error }) => {
 
   return (
     <>
-      <Backdrop>
-        <BackdropImage src={cover} />
-      </Backdrop>
-      <NowPlaying>
-        <CoverLink href={link}>
-          <Cover>
-            <CoverImage src={cover} />
-            <CoverShadow src={cover} />
-          </Cover>
-        </CoverLink>
+      {cover && (
+        <Backdrop>
+          <BackdropImage src={cover} />
+        </Backdrop>
+      )}
+      <NowPlaying cover={!!cover}>
+        {cover && (
+          <CoverLink href={link}>
+            <Cover>
+              <CoverImage src={cover} />
+              <CoverShadow src={cover} />
+            </Cover>
+          </CoverLink>
+        )}
         <Metadata>
           <Track>{track}</Track>
           <Artist>{artist}</Artist>
           <Album>{album}</Album>
-          <ProgressDisplay duration={durationInSeconds} position={position} />
+          <ProgressDisplay duration={duration} position={position} />
         </Metadata>
       </NowPlaying>
     </>
