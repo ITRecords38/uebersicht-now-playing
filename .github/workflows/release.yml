@@ -40,6 +40,7 @@ jobs:
       uses: EndBug/add-and-commit@v5
       with:
         add: 'now-playing.widget.zip'
+        branch: master
         message: 'chore(release): update zip file [skip ci]'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
