@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/believer/uebersicht-now-playing/compare/v1.1.0...v1.2.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* move link from cover since it might not exist ([3b2e826](https://github.com/believer/uebersicht-now-playing/commit/3b2e82658a015cd128dcb3b6610d8fddbd593af5))
+* progress bar with uniform durations ([aab56a9](https://github.com/believer/uebersicht-now-playing/commit/aab56a9cd971bd7b2035bb80b64117e2b0c1d2c2))
+
+
+### Features
+
+* display itunes artwork if it exists ([4cd79c1](https://github.com/believer/uebersicht-now-playing/commit/4cd79c12151264324a195fb7d326f4fbbab6fbea))
+
 # [1.1.0](https://github.com/believer/uebersicht-now-playing/compare/v1.0.0...v1.1.0) (2020-11-24)
 
 
