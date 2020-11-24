@@ -1,7 +1,8 @@
 # Now playing for Übersicht
 
 This is a now playing widget for [Übersicht](http://tracesof.net/uebersicht/)
-that displays the current track in Spotify.
+that displays the current track in Spotify or Music (iTunes) depending on which
+is currently playing.
 
 ![Screenshot of now playing widget](/docs/screenshot.jpg)
 
@@ -14,3 +15,4 @@ Download the `now-playing.widget.zip` and unzip it in your widgets folder
 
 - [x] Support both Spotify and Music (iTunes)
 - [x] Automatic releases with zip bundling for easier installation
+- [x] Display Music cover artwork
