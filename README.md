@@ -15,4 +15,4 @@ $ mv uebersicht-now-playing ~/Library/Application Support/Übersicht/widgets
 ## Upcoming features
 
 - [ ] Support both Spotify and Music (iTunes)
-- [ ] Automatic releases with zip bundling for easier installation
+- [x] Automatic releases with zip bundling for easier installation

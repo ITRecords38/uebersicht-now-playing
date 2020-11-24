@@ -7,8 +7,9 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest 
+    name: Release
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest lockfile
 
     steps:
     - name: Checkout code
@@ -28,4 +29,18 @@ jobs:
         # GITHUB_TOKEN is added automatically by GitHub
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Create zip
+      run: |
+        mkdir now-playing.widget
+        cp index.jsx now-playing.widget
+        cp script.scpt now-playing.widget
+        zip -r now-playing.widget.zip now-playing.widget
+
+    - name: Push updated zip
+      uses: EndBug/add-and-commit@v5
+      with:
+        add: 'now-playing.widget.zip'
+        message: 'chore(release): update zip file [skip ci]'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
