@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/believer/uebersicht-now-playing/compare/v1.0.0...v1.1.0) (2020-11-24)
+
+
+### Features
+
+* add music (itunes) support ([bb7f366](https://github.com/believer/uebersicht-now-playing/commit/bb7f3666361bf31ab0ad113e5f4690e48e56d92e))
+
 # 1.0.0 (2020-11-24)
 
 
