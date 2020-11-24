@@ -115,9 +115,10 @@ const TrackDuration = styled.button`
 `;
 
 const addLeadingZero = (v) => (v < 10 ? `0${v}` : v);
+const parseSeconds = (s) => parseFloat(s.toString().replace(",", "."));
 
 const parseTime = (seconds) => {
-  const parsedSeconds = parseFloat(seconds.toString().replace(",", "."));
+  const parsedSeconds = parseSeconds(seconds);
   const m = Math.floor(parsedSeconds / 60);
   const s = Math.floor(((parsedSeconds / 60) % 1) * 60);
 
@@ -126,12 +127,15 @@ const parseTime = (seconds) => {
 
 const ProgressDisplay = ({ position, duration }) => {
   const [displayCountdownTime, setCountdownTime] = React.useState(false);
+  const parsedDuration = parseSeconds(duration);
+  const parsedPosition = parseSeconds(position);
+  const progress = `${(parsedPosition / parsedDuration) * 100}%`;
 
   return (
     <Duration>
       {parseTime(position)}
       <ProgressBar>
-        <Progress style={{ width: `${(position / duration) * 100}%` }} />
+        <Progress style={{ width: progress }} />
       </ProgressBar>
       <TrackDuration onClick={() => setCountdownTime(!displayCountdownTime)}>
         {displayCountdownTime
