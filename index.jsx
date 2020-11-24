@@ -3,6 +3,7 @@ import { React, styled } from "uebersicht";
 export const command = "osascript ./now-playing/script.scpt";
 
 const Backdrop = styled.div`
+  background-color: #000;
   height: 100vh;
   position: relative;
   pointer-events: none;
@@ -13,7 +14,7 @@ const BackdropImage = styled.img`
   filter: blur(30px);
   height: 100%;
   object-fit: cover;
-  opacity: 0.2;
+  opacity: 0.3;
   transform: scale(1.2);
   pointer-events: none;
   width: 100%;
