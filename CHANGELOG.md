@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/believer/uebersicht-now-playing/compare/v1.3.0...v1.3.1) (2020-11-30)
+
+
+### Bug Fixes
+
+* add current track python script to zip ([54af9d7](https://github.com/believer/uebersicht-now-playing/commit/54af9d72b7985500eeba7027904cac15927fbc21))
+
 # [1.3.0](https://github.com/believer/uebersicht-now-playing/compare/v1.2.1...v1.3.0) (2020-11-30)
 
 
