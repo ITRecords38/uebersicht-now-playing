@@ -23,3 +23,4 @@ Album art is a bit slow to render, but they work.
 - [x] Support Sonos
 - [x] Automatic releases with zip bundling for easier installation
 - [x] Display Music cover artwork
+- [ ] Display paused state
