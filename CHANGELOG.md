@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/believer/uebersicht-now-playing/compare/v1.2.0...v1.2.1) (2020-11-30)
+
+
+### Bug Fixes
+
+* applications not running ([c9aa65a](https://github.com/believer/uebersicht-now-playing/commit/c9aa65af74b13af5d4aceca3598e9c3459e12429))
+
 # [1.2.0](https://github.com/believer/uebersicht-now-playing/compare/v1.1.0...v1.2.0) (2020-11-24)
 
 
