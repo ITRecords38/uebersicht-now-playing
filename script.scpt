@@ -9,6 +9,8 @@ if processList contains "Music" or processList contains "Spotify" then
 	
 	set output_data to nowplaying("Music", output_data)
 	set output_data to nowplaying("Spotify", output_data)
+else
+	set output_data to "not_running::::::::::::::"
 end if
 
 -- Main function
