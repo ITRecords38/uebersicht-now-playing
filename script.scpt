@@ -10,7 +10,7 @@ if processList contains "Music" or processList contains "Spotify" then
 	set output_data to nowplaying("Music", output_data)
 	set output_data to nowplaying("Spotify", output_data)
 else
-	set output_data to "not_running::::::::::::::"
+  do shell script "python ./now-playing/current_track.py"
 end if
 
 -- Main function
