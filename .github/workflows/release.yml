@@ -34,6 +34,8 @@ jobs:
         mkdir now-playing.widget
         cp index.jsx now-playing.widget
         cp script.scpt now-playing.widget
+        cp current_track.py now-playing.widget
+        cp README.md now-playing.widget
         zip -r now-playing.widget.zip now-playing.widget
 
     - name: Push updated zip
