@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/believer/uebersicht-now-playing/compare/v1.2.1...v1.3.0) (2020-11-30)
+
+
+### Features
+
+* add sonos support ([8533d82](https://github.com/believer/uebersicht-now-playing/commit/8533d8297ab8c13be0b664e950a258d47478d713))
+
 ## [1.2.1](https://github.com/believer/uebersicht-now-playing/compare/v1.2.0...v1.2.1) (2020-11-30)
 
 
