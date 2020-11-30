@@ -14,5 +14,6 @@ Download the `now-playing.widget.zip` and unzip it in your widgets folder
 ## Upcoming features
 
 - [x] Support both Spotify and Music (iTunes)
+- [ ] Support Sonos
 - [x] Automatic releases with zip bundling for easier installation
 - [x] Display Music cover artwork
