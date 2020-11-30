@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/believer/uebersicht-now-playing/compare/v1.3.1...v1.3.2) (2020-11-30)
+
+
+### Bug Fixes
+
+* utf8 encoding using python3 ([acb7806](https://github.com/believer/uebersicht-now-playing/commit/acb7806688b194ca0c700ab0521f1ddaa8bdb28d))
+
 ## [1.3.1](https://github.com/believer/uebersicht-now-playing/compare/v1.3.0...v1.3.1) (2020-11-30)
 
 
