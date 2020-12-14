@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/believer/uebersicht-now-playing/compare/v1.3.4...v1.3.5) (2020-12-14)
+
+
+### Bug Fixes
+
+* use now-playing.widget folder ([c4db4f9](https://github.com/believer/uebersicht-now-playing/commit/c4db4f9d92b019dfb4388cba722a4f7ae3eae7af))
+
 ## [1.3.4](https://github.com/believer/uebersicht-now-playing/compare/v1.3.3...v1.3.4) (2020-12-14)
 
 
