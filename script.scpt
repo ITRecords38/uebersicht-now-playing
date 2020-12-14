@@ -7,9 +7,11 @@ end tell
 if processList contains "Music" or processList contains "Spotify" then
 	set output_data to ""
 	
+  -- Try getting now playing from Music or Spotify
 	set output_data to nowplaying("Music", output_data)
 	set output_data to nowplaying("Spotify", output_data)
 else
+  -- If non of the above are playing, try Sonos
   do shell script "python3 ./now-playing/current_track.py"
 end if
 
