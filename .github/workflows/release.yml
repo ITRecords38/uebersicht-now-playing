@@ -42,7 +42,7 @@ jobs:
         cp current_track.py now-playing
         cp README.md now-playing
         ls now-playing
-        zip -r now-playing.widget now-playing
+        zip -r now-playing.widget.zip now-playing
 
     - name: Push updated zip
       uses: EndBug/add-and-commit@v5
