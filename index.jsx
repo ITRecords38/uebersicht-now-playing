@@ -1,6 +1,6 @@
 import { React, styled } from "uebersicht";
 
-export const command = "osascript ./now-playing/script.scpt";
+export const command = "osascript ./now-playing.widget/script.scpt";
 
 const Backdrop = styled.div`
   background-color: #000;
