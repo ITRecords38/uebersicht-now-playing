@@ -150,6 +150,11 @@ const ProgressDisplay = ({ position, duration }) => {
 };
 
 export const render = ({ output, error }) => {
+  if (error) {
+    console.log(error);
+    return null;
+  }
+
   const [
     state,
     artist,
@@ -161,7 +166,7 @@ export const render = ({ output, error }) => {
     duration,
   ] = output.split("::");
 
-  if (state !== "playing" || error) {
+  if (state !== "playing") {
     return null;
   }
 
