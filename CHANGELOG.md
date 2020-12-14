@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/believer/uebersicht-now-playing/compare/v1.3.2...v1.3.3) (2020-12-14)
+
+
+### Bug Fixes
+
+* don't crash on error, log it and return null ([0817a12](https://github.com/believer/uebersicht-now-playing/commit/0817a125956bf7e8252651ff7f93913c5094a4f7))
+
 ## [1.3.2](https://github.com/believer/uebersicht-now-playing/compare/v1.3.1...v1.3.2) (2020-11-30)
 
 
