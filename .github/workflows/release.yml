@@ -31,12 +31,15 @@ jobs:
 
     - name: Create zip
       run: |
-        mkdir now-playing.widget
-        cp index.jsx now-playing.widget
-        cp script.scpt now-playing.widget
-        cp current_track.py now-playing.widget
-        cp README.md now-playing.widget
-        zip -r now-playing.widget.zip now-playing.widget
+        rm -rf now-playing
+        rm -rf now-playing.widget
+        rm now-playing.widget.zip
+        mkdir now-playing
+        cp index.jsx now-playing
+        cp script.scpt now-playing
+        cp current_track.py now-playing
+        cp README.md now-playing
+        zip -r now-playing.widget.zip now-playing
 
     - name: Push updated zip
       uses: EndBug/add-and-commit@v5
