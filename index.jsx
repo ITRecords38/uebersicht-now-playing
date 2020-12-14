@@ -35,9 +35,10 @@ const NowPlaying = styled.div`
 `;
 
 const Link = styled.a`
-  color: rgb(79, 234, 253);
+  color: rgb(79, 234, 253, 0.5);
   cursor: pointer;
-  margin-left: 8px;
+  display: block;
+  margin-top: 16px;
 `;
 
 const Cover = styled.div`
@@ -181,11 +182,9 @@ export const render = ({ output, error }) => {
         <Metadata>
           <Track>{track}</Track>
           <Artist>{artist}</Artist>
-          <Album>
-            {album}
-            {link && <Link href={link}>Spotify</Link>}
-          </Album>
+          <Album>{album}</Album>
           <ProgressDisplay duration={duration} position={position} />
+          {link && <Link href={link}>Spotify</Link>}
         </Metadata>
       </NowPlaying>
     </>
