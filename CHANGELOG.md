@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/believer/uebersicht-now-playing/compare/v1.3.3...v1.3.4) (2020-12-14)
+
+
+### Bug Fixes
+
+* build to correct folder name fixes [#1](https://github.com/believer/uebersicht-now-playing/issues/1) ([63c4696](https://github.com/believer/uebersicht-now-playing/commit/63c4696612907bc745ebbf9cac459aae30ffc1e6))
+
 ## [1.3.3](https://github.com/believer/uebersicht-now-playing/compare/v1.3.2...v1.3.3) (2020-12-14)
 
 

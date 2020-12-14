@@ -1,6 +1,6 @@
 {
   "name": "now-playing",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "This is a now playing widget for [Übersicht](http://tracesof.net/uebersicht/) that displays the current track in Spotify.",
   "main": "index.js",
   "directories": {
