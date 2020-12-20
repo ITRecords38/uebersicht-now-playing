@@ -8,7 +8,7 @@ is currently playing.
 
 ## Installation
 
-Download the `now-playing.widget.zip` and unzip it to your widgets folder (default: ~/Library/Application Support/Übersicht/widgets).
+Download the `now-playing.widget.zip` and unzip it to your widgets folder (default: ~/Library/Application Support/Übersicht/widgets). It's important that the folder name of the widget is `now-playing`.
 
 ### Sonos
 
