@@ -5,57 +5,49 @@ tell application "System Events"
 end tell
 
 if processList contains "Music" or processList contains "Spotify" then
-	set output_data to ""
-	
-  -- Try getting now playing from Music or Spotify
-	set output_data to nowplaying("Music", output_data)
-	set output_data to nowplaying("Spotify", output_data)
-else
-  -- If non of the above are playing, try Sonos
-  do shell script "python3 ./now-playing/current_track.py"
-end if
-
--- Main function
--- This compiles a string separated with "::" that we can
--- parse in the widget to get the information we want to display
-on nowplaying(appname, output_data)
-	using terms from application "Music"
-		if application appname is running then
-			tell application appname
-				if player state is playing then
-					set link to ""
-					set cover to ""
-					set playerstate to "playing"
-					set trackname to name of current track
-					set trackartist to artist of current track
-					set albumname to album of current track
-					
-					set trackduration to duration of current track
-					set playerPosition to player position
-					
-					if appname is "Spotify" then
-						using terms from application "Spotify"
-							set trackduration to trackduration / 1000
-							set trackId to id of current track
-							set cover to artwork url of current track
-							set link to my spotifyLink(trackId)
-						end using terms from
-					end if
-					
-					if appname is "Music" then
-						set cover to my itunesArtwork()
-					end if
-					
-					set output_data to playerstate & "::" & trackartist & "::" & trackname & "::" & albumname & "::" & link & "::" & cover & "::" & playerPosition & "::" & trackduration
-				end if
+	-- Try getting now playing from Music or Spotify
+	if application "Music" is running then
+		tell application "Music"
+			if player state is playing then
+				set link to ""
+				set cover to ""
+				set playerState to "playing"
+				set trackName to name of current track
+				set trackArtist to artist of current track
+				set albumName to album of current track
+				set trackDuration to duration of current track
+				set playerPosition to player position
+				set cover to my itunesArtwork()
 				
-				return output_data
-			end tell
-		end if
-		
-		return output_data
-	end using terms from
-end nowplaying
+				return playerState & "::" & trackArtist & "::" & trackName & "::" & albumName & "::" & link & "::" & cover & "::" & playerPosition & "::" & trackDuration
+			end if
+		end tell
+	end if
+	
+	if application "Spotify" is running then
+		tell application "Spotify"
+			if player state is playing then
+				set link to ""
+				set cover to ""
+				set playerState to "playing"
+				set trackName to name of current track
+				set trackArtist to artist of current track
+				set albumName to album of current track
+				set trackDuration to duration of current track
+				set playerPosition to player position
+				set trackDuration to trackDuration / 1000
+				set trackId to id of current track
+				set cover to artwork url of current track
+				set link to my spotifyLink(trackId)
+				
+				return playerState & "::" & trackArtist & "::" & trackName & "::" & albumName & "::" & link & "::" & cover & "::" & playerPosition & "::" & trackDuration
+			end if
+		end tell
+	end if
+	
+	-- if non of the above are playing, try sonos
+	do shell script "python3 ./now-playing/current_track.py"
+end if
 
 -- Base64 encoding
 on base64encode(str)
@@ -104,4 +96,3 @@ on itunesArtwork()
 	
 	return cover
 end itunesArtwork
-
