@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/believer/uebersicht-now-playing/compare/v1.3.6...v1.3.7) (2020-12-22)
+
+
+### Bug Fixes
+
+* run sonos command even if music and spotify aren't open ([62ecc0f](https://github.com/believer/uebersicht-now-playing/commit/62ecc0fab4ee95e7b80d7e07b8c92ee60dd92f98))
+
 ## [1.3.6](https://github.com/believer/uebersicht-now-playing/compare/v1.3.5...v1.3.6) (2020-12-22)
 
 
