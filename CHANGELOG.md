@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/believer/uebersicht-now-playing/compare/v1.3.5...v1.3.6) (2020-12-22)
+
+
+### Bug Fixes
+
+* always return some data ([0391737](https://github.com/believer/uebersicht-now-playing/commit/0391737866546453a526425abf1a1b15c08ba07d))
+* **sonos:** handle wrong ip and display nothing while paused ([8425076](https://github.com/believer/uebersicht-now-playing/commit/8425076c7aadd2b75cdd07943d95b3f97a450fab))
+
 ## [1.3.5](https://github.com/believer/uebersicht-now-playing/compare/v1.3.4...v1.3.5) (2020-12-14)
 
 
