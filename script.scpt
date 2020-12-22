@@ -44,7 +44,7 @@ if processList contains "Music" or processList contains "Spotify" then
 			end if
 		end tell
 	end if
-	
+else
 	-- if non of the above are playing, try sonos
 	do shell script "python3 ./now-playing/current_track.py"
 end if
